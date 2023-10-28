@@ -1,6 +1,5 @@
-
-const getObjectValue = <T, K extends keyof K>(object: T, key: K): T[K] => {
-    return object[key]
+const getObjectValue = <T, K extends keyof T>(obj: T, key: K) => {
+    return obj[key]
 }
 
 
@@ -11,4 +10,4 @@ const value = getObjectValue({
     id: 1,
     name: 'YYY',
     role: ['developer']
-}, 'id')
+}, 'role')
